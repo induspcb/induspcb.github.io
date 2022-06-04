@@ -1,29 +1,38 @@
 
-HTML Result Skip Results Iframe
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, initial-scale=1, user-scalable=no, shrink-to-fit=no"/><meta charset="utf-8"/>
 <title>Password Protected page</title>
-<script type="text/javascript">
-var s ="1234";
-
-while (s!= "password")
-{
-s=prompt("please enter your password");
-if (s=="password")
-{
-window.location.href="https://induspcb.github.io/admin-verify.html; //page to redirect if password entered is correct
-
+<style>
+    body, html {
+        height: 100%;
+        width: 100%;
+        padding:0;
+        margin:0;
+    }
+#card {
+    width: 300px;
+    margin:0 auto;
+    box-shadow: 0px 0px 12px #333;
+    border-radius: 8px;
+    margin-top:30%;
+    display: none;
 }
-else
-{
-alert("Incorrect password-Try again");
 
-}
-}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$('#pwd').on('keyup', function() {
+    $('#card').toggle(this.value.trim().toLowerCase() == '1234');
+});
 </script>
 </head>
 <body>
-    
+    <input id="pwd" type="text"/>
+    <div id="card"><div style="background: #6D18FF; color: #fff; border-top-right-radius: 8px; border-top-left-radius: 8px; padding: 10px; font-weight: 900; font-size: 20px">Verify</div>
+    <div style="background: #FFD748; padding: 4px; width: 90%; margin: 0 auto; margin-top: 5px; margin-bottom: 5px; font-size: 12px; border: 1px solid #E0BD3F; border-radius: 5px; box-shadow: 0 0 3px #333; color: #7229B8">Welcome to Digital Verification Center Of Koushik Sarkar.to verify any given Document Digitalily please Enter The Pass Code I Gave you in my Document.</div>
+    </div>
 </body>
 </html>
